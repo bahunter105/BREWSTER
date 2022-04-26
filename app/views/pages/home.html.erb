@@ -1,6 +1,9 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
+<%= line_chart User.group_by_day(:created_at).count %>
+<%= line_chart BeerRecipe.group_by_day(:created_at).count %>
+
 <% @recipe.attributes.each do |attr_name, attr_value| %>
   <p> <%= attr_name +': '+  attr_value.to_s%> </p>
 <% end %>

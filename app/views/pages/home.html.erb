@@ -1,13 +1,12 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<div>
+<div data-controller="hello">
   <%# <%= line_chart User.group_by_day(:created_at).count %> %>
   <%# <%= line_chart BeerRecipe.group_by_day(:created_at).count %> %>
   <% data = {"2021-01-01" => 2, "2021-01-02" => 3} %>
   <%= line_chart ({"2021-01-01" => 2, "2021-01-02" => 3}), xtitle: "Time", ytitle: "Population" %>
   <%= line_chart data, xtitle: "Time", ytitle: "Population" %>
-  <%= radar_chart%>
 </div>
 
 
